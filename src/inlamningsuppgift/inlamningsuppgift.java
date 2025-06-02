@@ -2,7 +2,7 @@ package inlamningsuppgift;
 
 import java.util.Scanner;
 
-public class inlamningsuppgift2 {
+public class inlamningsuppgift {
     public static void main(String[] args) {
         System.out.println("Skriv din text, om du skriver STOP så kommer programmet avslutats");
         Scanner scan = new Scanner(System.in);
