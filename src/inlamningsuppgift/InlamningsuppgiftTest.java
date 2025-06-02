@@ -21,20 +21,20 @@ public class InlamningsuppgiftTest {
 
     }
     @Test
-    public void testWords() {
+    public void testChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
         nycounter.addWords(text);
 
         int expected = 5;
 
-        int actual = nycounter.getTotalWords();
+        int actual = nycounter.getTotalChar();
 
         assertEquals(expected, actual);
 
     }
     @Test
-    public void testTwoWords() {
+    public void testTwoChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
         nycounter.addWords(text);
@@ -43,7 +43,7 @@ public class InlamningsuppgiftTest {
 
         int expected = 17;
 
-        int actual = nycounter.getTotalWords();
+        int actual = nycounter.getTotalChar();
 
         assertEquals(expected, actual);
 
@@ -64,16 +64,16 @@ public class InlamningsuppgiftTest {
 
     }
     @Test
-    public void testStop() {
+    public void testWords() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
         nycounter.addWords(text);
         String text2 = "How are you?";
         nycounter.addWords(text2);
 
-        int expected = 2;
+        int expected = 4;
 
-        int actual = nycounter.getTotalLines();
+        int actual = nycounter.getTotalWords();
 
         assertEquals(expected, actual);
 

@@ -9,6 +9,7 @@ public class inlamningsuppgift {
         nycounter.useText();
 
         System.out.println(nycounter.getTotalLines());
+        System.out.println(nycounter.getTotalChar());
         System.out.println(nycounter.getTotalWords());
 
     }
