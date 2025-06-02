@@ -4,9 +4,9 @@ public class InlamningsuppgiftLogik {
     private int totalLines = 0;
     private int totalWords = 0;
 
-    public void addWords(String line) {
+    public void addWords(String text) {
         totalLines++;
-        totalWords += line.length();
+        totalWords += text.length();
     }
 
     public int getTotalLines() {
