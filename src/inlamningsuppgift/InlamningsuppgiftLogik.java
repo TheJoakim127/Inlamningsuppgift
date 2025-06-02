@@ -33,14 +33,9 @@ public class InlamningsuppgiftLogik {
 
 
     public void useText(String text) {
-        while (true) {
-            if (text.equalsIgnoreCase("stop")) {
-                addWords(text);
-                break;
-            }
+        while (text.toLowerCase() != "stop")
             addWords(text);
 
         }
 
     }
-}
