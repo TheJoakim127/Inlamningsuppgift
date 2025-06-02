@@ -1,6 +1,5 @@
 package inlamningsuppgift;
 
-import java.util.Scanner;
 
 public class InlamningsuppgiftLogik {
     private int totalLines = 0;
@@ -11,14 +10,10 @@ public class InlamningsuppgiftLogik {
         totalLines++;
         totalChar += text.length();
         totalWords += countWords(text);
+
     }
 
     public int countWords(String text) {
-        String[] words = text.trim().split(" ");
-        return words.length;
-    }
-
-    public int countLongestWord(String text) {
         String[] words = text.trim().split(" ");
         return words.length;
     }
@@ -37,14 +32,14 @@ public class InlamningsuppgiftLogik {
     }
 
 
-    public void useText() {
-        Scanner scan = new Scanner(System.in);
+    public void useText(String text) {
         while (true) {
-            String text = scan.nextLine();
             if (text.equalsIgnoreCase("stop")) {
+                addWords(text);
                 break;
             }
             addWords(text);
+
         }
 
     }
