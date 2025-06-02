@@ -38,10 +38,10 @@ public class InlamningsuppgiftTest {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
         nycounter.addWords(text);
-        String text2 = "How are you";
+        String text2 = "How are you?";
         nycounter.addWords(text2);
 
-        int expected = 16;
+        int expected = 17;
 
         int actual = nycounter.getTotalWords();
 
@@ -53,7 +53,22 @@ public class InlamningsuppgiftTest {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
         nycounter.addWords(text);
-        String text2 = "How are you";
+        String text2 = "How are you?";
+        nycounter.addWords(text2);
+
+        int expected = 2;
+
+        int actual = nycounter.getTotalLines();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testStop() {
+        InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
+        String text = "Hello";
+        nycounter.addWords(text);
+        String text2 = "How are you?";
         nycounter.addWords(text2);
 
         int expected = 2;
