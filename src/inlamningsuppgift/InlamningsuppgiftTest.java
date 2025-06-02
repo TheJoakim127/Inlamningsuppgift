@@ -10,7 +10,7 @@ public class InlamningsuppgiftTest {
     @Test
     public void testLines() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "hello";
+        String text = "Hello";
         nycounter.addWords(text);
 
         int expected = 1;
@@ -23,7 +23,7 @@ public class InlamningsuppgiftTest {
     @Test
     public void testWords() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "hello";
+        String text = "Hello";
         nycounter.addWords(text);
 
         int expected = 5;
