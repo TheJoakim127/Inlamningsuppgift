@@ -9,11 +9,11 @@ public class inlamningsuppgift {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
 
         while (true) {
-            String line = scan.nextLine();
-            if (line.equalsIgnoreCase("stop")) {
+            String text = scan.nextLine();
+            if (text.equalsIgnoreCase("stop")) {
                 break;
             }
-            nycounter.addWords(line);
+            nycounter.addWords(text);
         }
 
         System.out.println(nycounter.getTotalLines());
