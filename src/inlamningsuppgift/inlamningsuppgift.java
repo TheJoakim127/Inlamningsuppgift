@@ -11,9 +11,9 @@ public class inlamningsuppgift {
 
         nycounter.useText(scan.nextLine());
 
-        System.out.println(nycounter.getTotalLines());
-        System.out.println(nycounter.getTotalChar());
-        System.out.println(nycounter.getTotalWords());
+        System.out.println("Rader: " + nycounter.getTotalLines());
+        System.out.println("Täcken: " + nycounter.getTotalChar());
+        System.out.println("Ord: " + nycounter.getTotalWords());
 
     }
 }
