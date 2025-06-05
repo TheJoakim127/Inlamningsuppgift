@@ -5,7 +5,11 @@ public class InlamningsuppgiftLogik {
     private int totalLines = 0;
     private int totalChar = 0;
     private int totalWords = 0;
-    private String longestWord = "";
+    private String longestWord;
+
+    public InlamningsuppgiftLogik() {
+        this.longestWord = "";
+    }
 
 
     public int getTotalLines() {
