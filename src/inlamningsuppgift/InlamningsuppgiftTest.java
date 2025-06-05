@@ -31,6 +31,36 @@ public class InlamningsuppgiftTest {
         assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void teststop() {
+        InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
+        nycounter.useText("Hello");
+        nycounter.useText("Good day");
+        nycounter.useText("Stop");
+        int expected = 2;
+
+        int actual = nycounter.getTotalLines();
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testBadSpellingStop() {
+        InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
+        nycounter.useText("Hello");
+        nycounter.useText("Good day");
+        nycounter.useText("Good morning");
+        nycounter.useText("sToP");
+        int expected = 3;
+
+        int actual = nycounter.getTotalLines();
+
+        assertEquals(expected, actual);
+
+    }
+
     @Test
     public void testTwoChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
