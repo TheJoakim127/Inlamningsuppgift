@@ -18,6 +18,6 @@ public class inlamningsuppgiftMain {
 
         } while (loop);
 
-        System.out.println("Antal rader: " + nycounter.getTotalLines()+ "\n" + "Antal tecken: " + nycounter.getTotalChar() + "\n" + "Antal ord: " + nycounter.getTotalWords() + "\n" + "Längsta ordet är: " + nycounter.getLongestWord()+ "\n" + "Programmet är nu avslutat!");
+        System.out.println("Antal rader: "+nycounter.getTotalLines()+"\n"+"Antal tecken: "+nycounter.getTotalChar()+"\n"+"Antal ord: "+nycounter.getTotalWords()+"\n"+"Längsta ordet är: "+nycounter.getLongestWord()+"\n"+"Programmet är nu avslutat!");
     }
 }
