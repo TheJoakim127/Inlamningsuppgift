@@ -10,8 +10,7 @@ public class InlamningsuppgiftTest {
     @Test
     public void testLines() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
+        nycounter.useText("Hello");
 
         int expected = 1;
 
@@ -23,8 +22,7 @@ public class InlamningsuppgiftTest {
     @Test
     public void testChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
+        nycounter.useText("Hello");
 
         int expected = 5;
 
@@ -36,10 +34,8 @@ public class InlamningsuppgiftTest {
     @Test
     public void testTwoChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
-        String text2 = "How are you?";
-        nycounter.useText(text2);
+        nycounter.useText("Hello");
+        nycounter.useText("How are you?");
 
         int expected = 17;
 
@@ -51,10 +47,8 @@ public class InlamningsuppgiftTest {
     @Test
     public void testTwoLines() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
-        String text2 = "How are you?";
-        nycounter.useText(text2);
+        nycounter.useText("Hello");
+        nycounter.useText("How are you?");
 
         int expected = 2;
 
@@ -66,10 +60,8 @@ public class InlamningsuppgiftTest {
     @Test
     public void testWords() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
-        String text2 = "How are you?";
-        nycounter.useText(text2);
+        nycounter.useText("Hello");
+        nycounter.useText("How are you?");
 
         int expected = 4;
 
@@ -81,12 +73,9 @@ public class InlamningsuppgiftTest {
     @Test
     public void testLongestWord() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
-        String text = "Hello";
-        nycounter.useText(text);
-        String text2 = "How are you?";
-        nycounter.useText(text2);
-        String text3 = "impossible to answer!";
-        nycounter.useText(text3);
+        nycounter.useText("Hello");
+        nycounter.useText("How are you?");
+        nycounter.useText("impossible to answer!");
 
         String expected = "impossible";
 
