@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class inlamningsuppgiftMain {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.print("Skriv din text. när du är klar skriv \"stop\" ");
 
         boolean loop;
@@ -13,7 +13,7 @@ public class inlamningsuppgiftMain {
         String text;
 
         do {
-            text = scanner.nextLine();
+            text = scan.nextLine();
             loop = nycounter.useText(text);
 
         } while (loop);
