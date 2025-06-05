@@ -22,5 +22,6 @@ public class inlamningsuppgift {
         System.out.println("Antal tecken: " + nycounter.getTotalChar());
         System.out.println("Antal ord: " + nycounter.getTotalWords());
         System.out.println("Längsta ordet är: " + nycounter.getLongestWord());
+        System.out.println("Programmet är nu avslutat!");
     }
 }
