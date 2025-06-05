@@ -2,13 +2,16 @@ package inlamningsuppgift;
 
 
 public class InlamningsuppgiftLogik {
-    private int totalLines = 0;
-    private int totalChar = 0;
-    private int totalWords = 0;
+    private int totalLines;
+    private int totalChar;
+    private int totalWords;
     private String longestWord;
 
     public InlamningsuppgiftLogik() {
-        this.longestWord = "";
+        longestWord = "";
+        totalLines = 0;
+        totalChar = 0;
+        totalWords = 0;
     }
 
 
