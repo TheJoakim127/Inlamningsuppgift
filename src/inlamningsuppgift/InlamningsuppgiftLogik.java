@@ -11,7 +11,7 @@ public class InlamningsuppgiftLogik {
         totalLines = 0;
         totalChar = 0;
         totalWords = 0;
-        longestWord = "";
+        longestWord = "" ;
     }
 
 
