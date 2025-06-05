@@ -11,7 +11,7 @@ public class InlamningsuppgiftTest {
     public void testLines() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
-        nycounter.addWords(text);
+        nycounter.useText(text);
 
         int expected = 1;
 
@@ -24,7 +24,7 @@ public class InlamningsuppgiftTest {
     public void testChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
-        nycounter.addWords(text);
+        nycounter.useText(text);
 
         int expected = 5;
 
@@ -37,9 +37,9 @@ public class InlamningsuppgiftTest {
     public void testTwoChar() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
-        nycounter.addWords(text);
+        nycounter.useText(text);
         String text2 = "How are you?";
-        nycounter.addWords(text2);
+        nycounter.useText(text2);
 
         int expected = 17;
 
@@ -52,9 +52,9 @@ public class InlamningsuppgiftTest {
     public void testTwoLines() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
-        nycounter.addWords(text);
+        nycounter.useText(text);
         String text2 = "How are you?";
-        nycounter.addWords(text2);
+        nycounter.useText(text2);
 
         int expected = 2;
 
@@ -67,9 +67,9 @@ public class InlamningsuppgiftTest {
     public void testWords() {
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
         String text = "Hello";
-        nycounter.addWords(text);
+        nycounter.useText(text);
         String text2 = "How are you?";
-        nycounter.addWords(text2);
+        nycounter.useText(text2);
 
         int expected = 4;
 
@@ -78,6 +78,22 @@ public class InlamningsuppgiftTest {
         assertEquals(expected, actual);
 
     }
+    @Test
+    public void testLongestWord() {
+        InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
+        String text = "Hello";
+        nycounter.useText(text);
+        String text2 = "How are you?";
+        nycounter.useText(text2);
+        String text3 = "impossible to answer!";
+        nycounter.useText(text3);
 
+        String expected = "impossible";
+
+        String actual = nycounter.getLongestWord();
+
+        assertEquals(expected, actual);
+
+    }
 
 }

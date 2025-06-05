@@ -5,15 +5,22 @@ import java.util.Scanner;
 
 public class inlamningsuppgift {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Skriv din text, om du skriver STOP så kommer programmet avslutats");
+        System.out.println("Skriv din text, och när du är klar skriv Stop: ");
+        Scanner scanner = new Scanner(System.in);
+
+        boolean loop;
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
+        String text;
 
-        nycounter.useText(scan.nextLine());
+        do {
+            text = scanner.nextLine();
+            loop = nycounter.useText(text);
 
-        System.out.println("Rader: " + nycounter.getTotalLines());
-        System.out.println("Täcken: " + nycounter.getTotalChar());
-        System.out.println("Ord: " + nycounter.getTotalWords());
+        } while (loop);
 
+        System.out.println("Antal rader: " + nycounter.getTotalLines());
+        System.out.println("Antal tecken: " + nycounter.getTotalChar());
+        System.out.println("Antal ord: " + nycounter.getTotalWords());
+        System.out.println("Längsta ordet är: " + nycounter.getLongestWord());
     }
 }
