@@ -6,8 +6,6 @@ public class InlamningsuppgiftLogik {
     private int totalChar = 0;
     private int totalWords = 0;
     private String longestWord = "";
-    private int lengthofLongestWord = 0;
-    private String text = "";
 
 
     public int getTotalLines() {
@@ -28,29 +26,22 @@ public class InlamningsuppgiftLogik {
 
 
     public boolean useText(String text) {
-        if (text.equalsIgnoreCase("stop")) {
+        if ("stop".equalsIgnoreCase(text.trim())) {
             return false;
         }
 
-        this.text = text;
         totalLines++;
         totalChar += text.length();
 
-        if (text.equals(""))
-            return true;
-
         String[] words = text.split(" ");
+        totalWords += words.length;
+
         for (String word : words) {
-            if (word.length() > lengthofLongestWord) {
-                lengthofLongestWord = word.length();
+            if (word.length() > longestWord.length()) {
                 longestWord = word;
-            } else if (word.length() == lengthofLongestWord) {
-                if (!longestWord.contains(word)) {
-                    longestWord += ", " + word;
-                }
             }
         }
-        totalWords += words.length;
+
         return true;
     }
 

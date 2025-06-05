@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class inlamningsuppgift {
     public static void main(String[] args) {
-        System.out.println("Skriv din text, och när du är klar skriv Stop: ");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Skriv din text. när du är klar skriv stop: ");
 
         boolean loop;
         InlamningsuppgiftLogik nycounter = new InlamningsuppgiftLogik();
