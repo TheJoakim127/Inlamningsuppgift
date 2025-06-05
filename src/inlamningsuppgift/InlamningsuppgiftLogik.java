@@ -8,10 +8,10 @@ public class InlamningsuppgiftLogik {
     private String longestWord;
 
     public InlamningsuppgiftLogik() {
-        longestWord = "";
         totalLines = 0;
         totalChar = 0;
         totalWords = 0;
+        longestWord = "";
     }
 
 
